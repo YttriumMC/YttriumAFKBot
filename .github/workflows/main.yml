@@ -39,6 +39,6 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/mercury-afk-bot:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/mercury-afk-bot:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/mercury-afk-bot:buildcache,mode=max
+          tags: ${{ secrets.DOCKER_USERNAME }}/yttrium-afk-bot:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/yttrium-afk-bot:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/yttrium-afk-bot:buildcache,mode=max
