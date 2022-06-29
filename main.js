@@ -6,6 +6,12 @@ var options = {
 };
 
 
+var dockerprocess = require('process')
+dockerprocess.on('SIGINT', () => {
+  console.info("Stopping")
+  dockerprocess.exit(0)
+})
+
 var bot = mineflayer.createBot(options);  
 console.log("----MercuryMC AFK bot Starting----")
 bindEvents(bot);
