@@ -5,6 +5,13 @@ var options = {
     username: process.argv[3],
 };
 
+
+var process = require('process')
+process.on('SIGINT', () => {
+  console.info("Interrupted")
+  process.exit(0)
+})
+
 var bot = mineflayer.createBot(options);  
 console.log("----MercuryMC AFK bot Starting----")
 bindEvents(bot);
@@ -35,3 +42,4 @@ function relog() {
     bot = mineflayer.createBot(options);
     bindEvents(bot);
 }
+
