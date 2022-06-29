@@ -1,0 +1,27 @@
+{
+  "name": "mercuryafkbot",
+  "version": "1.0.0",
+  "description": "Simple AFK bot with auto-reconnect feature",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MercuryMC-Development-Team/MercuryAFKBot.git"
+  },
+  "keywords": [
+    "bot",
+    "mineflayer",
+    "afk"
+  ],
+  "author": "vertukv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MercuryMC-Development-Team/MercuryAFKBot/issues"
+  },
+  "homepage": "https://github.com/MercuryMC-Development-Team/MercuryAFKBot#readme",
+  "dependencies": {
+    "mineflayer": "^4.3.0"
+  }
+}
