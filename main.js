@@ -5,7 +5,7 @@ var options = {
     username: process.argv[3],
 };
 
-
+// Docker Ctrl+C fix
 var dockerprocess = require('process')
 dockerprocess.on('SIGINT', () => {
   console.info("Stopping")
