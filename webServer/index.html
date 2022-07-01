@@ -127,12 +127,12 @@
 
        function ChangeHostIpButtonClicked(){
          var NewHostIP = document.getElementById('HostIpInput')
-			   socket.emit('ChangeUsernameButtonClicked', NewHostIP.value);
+			   socket.emit('ChangeHostIpButtonClicked', NewHostIP.value);
          NewHostIP.value = '';
 			 }
        function ChangeHostPortButtonClicked(){
          var NewHostPort = document.getElementById('HostPortInput')
-			   socket.emit('ChangeUsernameButtonClicked', NewHostPort.value);
+			   socket.emit('ChangeHostPortButtonClicked', NewHostPort.value);
          NewHostPort.value = '';
 			 }
        function StartButtonClicked(){
