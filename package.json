@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/YttriumMC/YttriumAFKBot#readme",
   "dependencies": {
-    "mineflayer": "^4.3.0"
+    "events": "^3.3.0",
+    "express": "^4.18.1",
+    "mineflayer": "^4.3.0",
+    "pngjs-image": "^0.11.7",
+    "socket.io": "^4.5.1"
   }
 }
