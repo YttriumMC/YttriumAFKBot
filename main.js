@@ -48,9 +48,10 @@ function BotEndedCheck() {
   console.log("Bot has ended, trying to reconnect in 10 seconds");
     // If set less than 30s you will get an invalid credentials error, which we handle above.
     if (!IsRestarting) {
-      setTimeout(relog, 10000);
+      setTimeout(relog, 5000);
       IsRestarting = true;
     }
+    
   }
   else {
     console.log("Bot is disabled. You can enable it again in Web UI")
@@ -59,7 +60,7 @@ function BotEndedCheck() {
 }
 
 function relog() {
-    if(BotEnabled == true) { 
+    if(BotEnabled == true && bot._client.ended) { 
     console.log("Attempting to reconnect...");
     bot = mineflayer.createBot(options);
     bindEvents(bot);
@@ -68,6 +69,7 @@ function relog() {
     if (BotEnabled == false) {
       console.log('Bot is disabled. You can enable it again in Web UI.')
       IsRestarting = false
+      setTimeout(relog, 5000);
     }
 }
 
@@ -87,6 +89,8 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
+const { debug } = require('console');
+const { debuglog } = require('util');
 const io = new Server(server);
 
 app.get('/', (req, res) => {
@@ -142,7 +146,6 @@ io.on('connection', (socket) => {
   io.emit('BotStatus', BotEnabled);
   },1000)
 });
-
 server.listen(WebPort, () => {
   console.log('listening on *:' + WebPort);
 });
