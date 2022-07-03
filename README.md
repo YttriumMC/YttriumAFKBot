@@ -7,7 +7,7 @@ Simple AFK bot for Minecraft: Java Edition based on mineflayer
 ## Running in docker
 Docker containers are available
 
->docker run --rm -it -p 4141:4141 ytteiummc/yttrium-afk-bot IP PORT NICKNAME
+>docker run --rm -it -p 4141:4141 yttriummc/yttrium-afk-bot IP PORT NICKNAME
 
 **Web panel is available at localhost:4141 :)**
 
